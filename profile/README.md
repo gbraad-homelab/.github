@@ -1,7 +1,7 @@
 Homelab related repositories
 ============================
 
-This orgainzation contains application repistories for the following:
+This organization contains application repistories for the following:
 - Nextcloud
 - Forgejo
 - Jellyfin
