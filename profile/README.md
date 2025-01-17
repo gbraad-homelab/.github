@@ -12,4 +12,4 @@ using [Tailscale](https://tailscale.com) and [Cloudflare Tunnel](https://develop
 This means the applications are exposed to a private and/or public network, without the need for a public IP address.
 More network related setup is published at [spotsnel](https://github.com/spotsnel/), such as system containers for Tailscale and Cloudflared
 
-Hosted apllications can be found at [gbraad-apps](https://github.com/gbraad-apps/), such as [personal-obsidian](https://github.com/gbraad-apps/personal-obsidian).
+Hosted applications can be found at [gbraad-apps](https://github.com/gbraad-apps/), such as [personal-obsidian](https://github.com/gbraad-apps/personal-obsidian).
