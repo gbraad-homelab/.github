@@ -2,10 +2,10 @@ Homelab related repositories
 ============================
 
 This organization contains application repistories for the following:
-- Nextcloud
-- Forgejo
-- Jellyfin
-- Home Assistant
+- [Nextcloud](https://github.com/gbraad-homelab/personal-nextcloud)
+- [Forgejo](https://github.com/gbraad-homelab/personal-forgejo)
+- [Jellyfin](https://github.com/gbraad-homelab/personal-jellyfin)
+- [Home Assistant](https://github.com/gbraad-homelab/personal-homeassistant)
 - ...
 
 using [Tailscale](https://tailscale.com) and [Cloudflare Tunnel](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/).
