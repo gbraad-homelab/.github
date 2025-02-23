@@ -20,6 +20,18 @@ $ bootc switch ghcr.io/gbraad-homelab/forgejo-bootc:latest
 
 ### [[Jellyfin](https://github.com/gbraad-homelab/personal-jellyfin)]
 
+```
+$ podman run -d --name jellyfin --hostname ${HOSTNAME}-jellyfin \
+    --net=ncentre-bridge --ip 10.0.21.160  \
+    --cap-add=NET_ADMIN --cap-add=NET_RAW --device=/dev/net/tun --cap-add=SYS_ADMIN --device=/dev/fuse \
+    ghcr.io/gbraad-homelab/jellyfin:latest
+```
+
+```
+$ bootc switch ghcr.io/gbraad-homelab/jellyfin-bootc:latest
+```
+
+
 ### [[Home Assistant](https://github.com/gbraad-homelab/personal-homeassistant)]
 
 > [!NOTE]
