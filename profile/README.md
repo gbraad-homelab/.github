@@ -2,11 +2,24 @@ Homelab related repositories
 ============================
 
 This organization contains application repistories for the following:
-- base infrastructure image for [image-based](https://github.com/gbraad-homelab/private-base) deployment of
-  - [Nextcloud](https://github.com/gbraad-homelab/personal-nextcloud)
-  - [Forgejo](https://github.com/gbraad-homelab/personal-forgejo)
-  - [Jellyfin](https://github.com/gbraad-homelab/personal-jellyfin)
-  - [Home Assistant](https://github.com/gbraad-homelab/personal-homeassistant)
+
+### [[Nextcloud](https://github.com/gbraad-homelab/personal-nextcloud)]
+
+### [[Forgejo](https://github.com/gbraad-homelab/personal-forgejo)] <span title="Automated build">⚙️</span>
+
+```
+$ podman run ghcr.io/gbraad-homelab/forgejo-bootc:latest
+```
+
+```
+$ bootc switch ghcr.io/gbraad-homelab/forgejo-bootc:latest
+```
+
+### [[Jellyfin](https://github.com/gbraad-homelab/personal-jellyfin)]
+
+### [[Home Assistant](https://github.com/gbraad-homelab/personal-homeassistant)]
+
+
 - ...
 
 using [Tailscale](https://tailscale.com) and [Cloudflare Tunnel](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/).
