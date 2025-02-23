@@ -5,6 +5,8 @@ This organization contains application repistories for the following:
 
 ### [[Nextcloud](https://github.com/gbraad-homelab/personal-nextcloud)]
 
+
+
 ### [[Forgejo](https://github.com/gbraad-homelab/personal-forgejo)] <span title="Automated build">⚙️</span>
 
 ```
@@ -17,6 +19,7 @@ $ podman run -d --name forgejo --hostname ${HOSTNAME}-forgejo \
 ```
 $ bootc switch ghcr.io/gbraad-homelab/forgejo-bootc:latest
 ```
+
 
 ### [[Jellyfin](https://github.com/gbraad-homelab/personal-jellyfin)]
 
@@ -33,6 +36,14 @@ $ bootc switch ghcr.io/gbraad-homelab/jellyfin-bootc:latest
 
 
 ### [[Home Assistant](https://github.com/gbraad-homelab/personal-homeassistant)]
+
+```
+$ podman run -d --name homeassistant --hostname ${HOSTNAME}-homeassistant \
+    --net=nroute-switch --ip 10.0.21.90 \
+    --cap-add=NET_ADMIN --cap-add=NET_RAW --device=/dev/net/tun \
+    ghcr.io/gbraad-homelab/homeassistant:latest
+```
+
 
 > [!NOTE]
 > Instructions to run the image-based deployment can be found here: [Image-based Virtual Machines](https://github.com/gbraad-dotfiles/.github/blob/main/profile/README.md#image-based-virtual-machines)
