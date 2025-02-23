@@ -20,7 +20,7 @@ $ bootc switch ghcr.io/gbraad-homelab/forgejo-bootc:latest
 ```
 
 
-### [[Jellyfin](https://github.com/gbraad-homelab/personal-jellyfin)]
+### [[Jellyfin](https://github.com/gbraad-homelab/personal-jellyfin)] <span title="Automated build">⚙️</span>
 
 ```
 $ podman run -d --name jellyfin --hostname ${HOSTNAME}-jellyfin \
