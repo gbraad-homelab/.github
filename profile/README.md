@@ -8,7 +8,10 @@ This organization contains application repistories for the following:
 ### [[Forgejo](https://github.com/gbraad-homelab/personal-forgejo)] <span title="Automated build">⚙️</span>
 
 ```
-$ podman run ghcr.io/gbraad-homelab/forgejo-bootc:latest
+$ podman run -d --name forgejo --hostname ${HOSTNAME}-forgejo \
+    --net=ncentre-bridge --ip 10.0.21.150 \
+    --cap-add=NET_ADMIN --cap-add=NET_RAW --device=/dev/net/tun --cap-add AUDIT_CONTROL \
+    ghcr.io/gbraad-homelab/forgejo:latest
 ```
 
 ```
