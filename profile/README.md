@@ -3,8 +3,13 @@ Homelab related repositories
 
 Instructions to run the image-based deployment can be found here: [Image-based Virtual Machines](https://github.com/gbraad-dotfiles/.github/blob/main/profile/README.md#image-based-virtual-machines)
 
-This organization contains application repistories for the following:
+This organization contains application repistories using [Tailscale](https://tailscale.com) and [Cloudflare Tunnel](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/).
+This means the applications are exposed to a private and/or public network, without the need for a public IP address.
+More network related setup is published at [spotsnel](https://github.com/spotsnel/), such as system containers for Tailscale and Cloudflared
 
+Hosted applications can be found at [gbraad-apps](https://github.com/gbraad-apps/), such as [personal-obsidian](https://github.com/gbraad-apps/personal-obsidian).
+
+---
 
 ### [[Forgejo](https://github.com/gbraad-homelab/personal-forgejo)] <span title="Automated build">⚙️</span>
 
@@ -81,8 +86,4 @@ $ sudo virt-install \
 
 - ...
 
-using [Tailscale](https://tailscale.com) and [Cloudflare Tunnel](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/).
-This means the applications are exposed to a private and/or public network, without the need for a public IP address.
-More network related setup is published at [spotsnel](https://github.com/spotsnel/), such as system containers for Tailscale and Cloudflared
 
-Hosted applications can be found at [gbraad-apps](https://github.com/gbraad-apps/), such as [personal-obsidian](https://github.com/gbraad-apps/personal-obsidian).
