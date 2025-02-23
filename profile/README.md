@@ -1,10 +1,9 @@
 Homelab related repositories
 ============================
 
+Instructions to run the image-based deployment can be found here: [Image-based Virtual Machines](https://github.com/gbraad-dotfiles/.github/blob/main/profile/README.md#image-based-virtual-machines)
+
 This organization contains application repistories for the following:
-
-### [[Nextcloud](https://github.com/gbraad-homelab/personal-nextcloud)]
-
 
 
 ### [[Forgejo](https://github.com/gbraad-homelab/personal-forgejo)] <span title="Automated build">⚙️</span>
@@ -35,7 +34,30 @@ $ bootc switch ghcr.io/gbraad-homelab/jellyfin-bootc:latest
 ```
 
 
-### [[Home Assistant](https://github.com/gbraad-homelab/personal-homeassistant)]
+### [[Nextcloud](https://github.com/gbraad-homelab/personal-nextcloud)] <span title="Automated build">⚙️</span>
+
+```
+$ podman run -d --name nextcloud --hostname ${HOSTNAME}-nextcloud \
+    --net=ncentre-bridge --ip 10.0.21.130  \
+    --cap-add=NET_ADMIN --cap-add=NET_RAW --device=/dev/net/tun \
+    -v /var/lib/nextcloud:/var/lib/nextcloud \
+    ghcr.io/gbraad-homelab/nextcloud:latest
+```
+
+```
+$ wget https://github.com/gbraad-homelab/personal-nextcloud/releases/download/250223/disk.qcow2 \
+     -O nextcloud.qcow2
+$ sudo virt-install \
+    --name nextcloud --os-variant fedora-eln \
+    --cpu host --vcpus 4 --memory 4096 \
+    --import --disk ./nextcloud.qcow2,format=qcow2
+```
+
+> [!NOTE]
+> At the moment `bootc switch` will not work for this image due to the content in `/var` and `/etc`.
+
+
+### [[Home Assistant](https://github.com/gbraad-homelab/personal-homeassistant)] <span title="Automated build">⚙️</span>
 
 ```
 $ podman run -d --name homeassistant --hostname ${HOSTNAME}-homeassistant \
@@ -44,9 +66,17 @@ $ podman run -d --name homeassistant --hostname ${HOSTNAME}-homeassistant \
     ghcr.io/gbraad-homelab/homeassistant:latest
 ```
 
+```
+$ wget https://github.com/gbraad-homelab/personal-homeassistant/releases/download/250223/disk.qcow2 \
+     -O homeassistant.qcow2
+$ sudo virt-install \
+    --name homeassistant --os-variant fedora-eln \
+    --cpu host --vcpus 4 --memory 4096 \
+    --import --disk ./nextcloud.qcow2,format=qcow2
+```
 
 > [!NOTE]
-> Instructions to run the image-based deployment can be found here: [Image-based Virtual Machines](https://github.com/gbraad-dotfiles/.github/blob/main/profile/README.md#image-based-virtual-machines)
+> At the moment `bootc switch` will not work for this image due to the content in `/var` and `/etc`.
 
 
 - ...
