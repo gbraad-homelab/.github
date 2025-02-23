@@ -82,8 +82,3 @@ $ sudo virt-install \
 
 > [!NOTE]
 > At the moment `bootc switch` will not work for this image due to the content in `/var` and `/etc`.
-
-
-- ...
-
-
