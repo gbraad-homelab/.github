@@ -22,6 +22,9 @@ $ bootc switch ghcr.io/gbraad-homelab/forgejo-bootc:latest
 
 ### [[Home Assistant](https://github.com/gbraad-homelab/personal-homeassistant)]
 
+> [!NOTE]
+> Instructions to run the image-based deployment can be found here: [Image-based Virtual Machines](https://github.com/gbraad-dotfiles/.github/blob/main/profile/README.md#image-based-virtual-machines)
+
 
 - ...
 
